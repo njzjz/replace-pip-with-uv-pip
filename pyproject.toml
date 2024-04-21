@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "replace-pip-with-uv-pip"
+version = "0.0.1"
+description = "Replace pip with uv pip."
+classifiers = [
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+]
+dependencies = [
+    "uv",
+]
+requires-python = ">=3.8"
+readme = "README.md"
+
+[project.urls]
+Homepage = "https://github.com/njzjz/replace-pip-with-uv-pip"
+
+[project.scripts]
+pip = "replace_pip_with_uv:pip"
+
+[tool.ruff]
+select = [
+    "E", # errors
+    "F", # pyflakes
+	"I", # isort
+    "UP", # pyupgrade
+]
