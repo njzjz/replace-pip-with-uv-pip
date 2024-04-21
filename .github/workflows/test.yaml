@@ -17,5 +17,7 @@ jobs:
         python-version: '3.12'
         architecture: 'x64'
     - run: pip install .
-    - run: uv pip uninstall -y pip
-    - run: pip install numpy --system
+    - run: uv pip uninstall pip
+    - run: pip install numpy
+      env:
+        UV_SYSTEM_PYTHON: 1
