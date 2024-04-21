@@ -18,6 +18,8 @@ jobs:
         architecture: 'x64'
     - run: pip install .
     - run: uv pip uninstall pip
+      env:
+        UV_SYSTEM_PYTHON: 1
     - run: pip install numpy
       env:
         UV_SYSTEM_PYTHON: 1
