@@ -17,5 +17,5 @@ Installing `replace-pip-with-uv-pip` is a workaround:
 ```toml
 # in pyproject.toml:
 [tool.cibuildwheel]
-before-test = ["pip install replace-pip-with-uv-pip"]
+before-test = ["python -m pip install replace-pip-with-uv-pip"]
 ```
